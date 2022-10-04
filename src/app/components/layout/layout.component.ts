@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrganizationListService } from 'src/app/services/organization-list.service';
 
 @Component({
   selector: 'app-layout',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
+  organizations = this.organizationListService.getOrganizations();
 
-  constructor() { }
+  constructor(private organizationListService: OrganizationListService) { }
 
   ngOnInit(): void {
   }

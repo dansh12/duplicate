@@ -1,8 +1,8 @@
 <div class="border">
     <div class="orientation">
         <div id="headline-info-container">
-            <img src="" alt="" id="organization-logo">
-            <h4 id="organization-name">Organization name</h4>
+            <img [src]=organization.logo id="organization-logo">
+            <h4 id="organization-name">{{organization.name}}</h4>
         </div>
         <button mat-icon-button id="options-menu">
             <mat-icon>more_vert</mat-icon>
@@ -15,7 +15,7 @@
             <h6>Tracking</h6>
             <div class="orientation">
                 <p class="info-name">In use:</p>
-                <p class="info">1245</p>
+                <p class="info">{{organization.tracking}}</p>
             </div>
             <div class="orientation">
                 <p class="info-name">Assigned:</p>
@@ -26,7 +26,7 @@
             <h6>Protection</h6>
             <div class="orientation">
                 <p class="info-name">In use:</p>
-                <p class="info">1245</p>
+                <p class="info">{{organization.protection}}</p>
             </div>
             <div class="orientation">
                 <p class="info-name">Assigned:</p>

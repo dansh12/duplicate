@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CardComponent } from './components/card/card.component';
+import { AddOrganizationComponent } from './components/add-organization/add-organization.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    CardComponent
+    CardComponent,
+    AddOrganizationComponent
   ],
   imports: [
     BrowserModule,

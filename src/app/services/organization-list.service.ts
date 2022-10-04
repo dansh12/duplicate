@@ -6,7 +6,12 @@ import { Organization } from '../interfaces/organization';
 })
 export class OrganizationListService {
 
-  private organizations: Organization[] = [];
+  private organizations: Organization[] = [{
+    name:"Organization Name 1",
+    logo:"https://upload.wikimedia.org/wikipedia/commons/a/a7/Wikipedia_logo_v3.svg",
+    tracking: 1245,
+    protection: 1245,
+  }];
 
   constructor() { }
 
