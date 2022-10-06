@@ -1,0 +1,36 @@
+@mixin border-color($border-color: black) {
+    // margin-right: 30px;
+    border: 2px solid $border-color;
+    border-radius: 3px;
+    outline: none;
+}
+form{
+    border-radius: 5px;
+    margin: 70px;
+    height: 250px;
+    width: 480px;
+    background-color: white;
+    color: black;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-between;
+    margin: 5px 20px;
+}
+.horizontal-centering{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.inputs{
+    @include border-color(black);
+}
+.input-valid{
+    @include border-color(green);
+}
+.input-invalid{
+    @include border-color(red);
+}

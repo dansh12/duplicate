@@ -1,1 +1,52 @@
-<p>add-organization works!</p>
+<form [formGroup]="organization" (ngSubmit)="onSubmit()">
+    <div class="horizontal-centering">
+        <h3>Add a new organization</h3>
+    </div>
+    <div class="flex-row">
+        <div>
+            <label for="name">Enter the organization name:</label>
+        </div>
+        <div>
+            <input class="inputs" type="text" formControlName="name"
+                [ngClass]="organization.get('name')?.valid? 'input-valid':''"
+                [class.input-invalid]="!organization.get('name')?.valid && organization.get('name')?.touched"
+                required="" [(ngModel)]="name">
+        </div>
+    </div>
+    <div class="flex-row">
+        <div>
+            <label for="logo">Enter the organization logo link:</label>
+        </div>
+        <div>
+            <input class="inputs" type="text" formControlName="logo"
+                [ngClass]="organization.get('logo')?.valid? 'input-valid':''"
+                [class.input-invalid]="!organization.get('logo')?.valid && organization.get('logo')?.touched"
+                required="" [(ngModel)]="logo">
+        </div>
+    </div>
+    <div class="flex-row">
+        <div>
+            <label for="tracking">How many trackings are in use:</label>
+        </div>
+        <div>
+            <input class="inputs" type="number" formControlName="tracking"
+                [ngClass]="organization.get('tracking')?.valid? 'input-valid':''"
+                [class.input-invalid]="!organization.get('tracking')?.valid && organization.get('tracking')?.touched"
+                required="" [(ngModel)]="tracking">
+        </div>
+    </div>
+    <div class="flex-row">
+        <div>
+            <label for="protection">How many protections are in use:</label>
+        </div>
+        <div>
+            <input class="inputs" type="number" formControlName="protection"
+                [ngClass]="organization.get('protection')?.valid? 'input-valid':''"
+                [class.input-invalid]="!organization.get('protection')?.valid && organization.get('protection')?.touched"
+                required="" [(ngModel)]="protection">
+        </div>
+    </div>
+    <div class="horizontal-centering">
+        <button [disabled]="!organization.valid">Submit</button>
+    </div>
+</form>

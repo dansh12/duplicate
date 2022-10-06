@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Organization } from 'src/app/interfaces/organization';
+import { OrganizationListService } from 'src/app/services/organization-list.service';
 
 @Component({
   selector: 'app-card',
@@ -8,9 +9,13 @@ import { Organization } from 'src/app/interfaces/organization';
 })
 export class CardComponent implements OnInit {
   @Input() organization!: Organization;
-  constructor() { }
+  organizationList = this.organizationListService.getOrganizations();
+  constructor(private organizationListService: OrganizationListService) { }
 
   ngOnInit(): void {
   }
-
+  
+  deleteCard(){
+    this.organizationList.splice(this.organizationList.indexOf(this.organization),1);
+  }
 }

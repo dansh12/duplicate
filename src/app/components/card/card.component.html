@@ -4,9 +4,14 @@
             <img [src]=organization.logo id="organization-logo">
             <h4 id="organization-name">{{organization.name}}</h4>
         </div>
-        <button mat-icon-button id="options-menu">
+        <button mat-icon-button id="options-menu" [matMenuTriggerFor]="menu">
             <mat-icon>more_vert</mat-icon>
         </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="deleteCard()">
+                <mat-icon class="delete-logo">not_interested</mat-icon>delete
+            </button>
+        </mat-menu>
     </div>
     <hr>
     <h5>Licenses</h5>
