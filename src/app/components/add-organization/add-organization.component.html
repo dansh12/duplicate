@@ -19,8 +19,8 @@
         </div>
         <div>
             <input class="inputs" type="text" formControlName="logo"
-                [ngClass]="organization.get('logo')?.valid? 'input-valid':''"
-                [class.input-invalid]="!organization.get('logo')?.valid && organization.get('logo')?.touched"
+                [ngClass]="organization.get('logo')?.valid && isVallidImageUrl()? 'input-valid':''"
+                [class.input-invalid]="organization.get('logo')?.touched &&!isVallidImageUrl()"
                 required="" [(ngModel)]="logo">
         </div>
     </div>
@@ -42,11 +42,11 @@
         <div>
             <input class="inputs" type="number" formControlName="protection"
                 [ngClass]="organization.get('protection')?.valid? 'input-valid':''"
-                [class.input-invalid]="!organization.get('protection')?.valid && organization.get('protection')?.touched"
+                [class.input-invalid]="!organization.get('protection')?.valid && organization.get('protection')?.touched "
                 required="" [(ngModel)]="protection">
         </div>
     </div>
     <div class="horizontal-centering">
-        <button [disabled]="!organization.valid">Submit</button>
+        <button [disabled]="!organization.valid || !isVallidImageUrl()">Submit</button>
     </div>
 </form>

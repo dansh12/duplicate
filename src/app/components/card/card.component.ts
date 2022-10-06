@@ -8,6 +8,8 @@ import { OrganizationListService } from 'src/app/services/organization-list.serv
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
+  trackingAssigned !: number;
+  protectionAssigned!: number;
   @Input() organization!: Organization;
   organizationList = this.organizationListService.getOrganizations();
   constructor(private organizationListService: OrganizationListService) { }

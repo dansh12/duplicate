@@ -1,65 +1,115 @@
-%orientation-row{
+%orientation-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.mat-icon-button{
+
+.mat-icon-button {
     background: none;
 }
-.border{
-    border: 1px solid black;
-    height: 160px;
+
+.border {
+    height: 170px;
     padding: 0 20px;
+    width: 90%;
 }
-.orientation{
+
+.orientation-row {
     @extend %orientation-row;
-    // height: 50px;
-    
 }
-#organization-name{
+
+#organization-name {
     margin: 0 20px 0;
 }
-#organization-logo{
+
+#organization-logo {
     height: 19px;
     width: 19px;
     border-radius: 50%;
 }
-#headline-info-container{
+
+#headline-info-container {
     display: flex;
     flex-direction: row;
 }
-hr{
+
+hr {
     margin: 0;
 }
-h5{
+
+h5 {
     margin: 10px 0;
 }
-h6{
+
+h6 {
     margin: 0;
 }
-.info-name{
+
+.info-name {
     font-size: 10px;
-    margin-right: 40px ;
+    margin-bottom: 0px;
+    margin-right: 20px;
 }
-.info{
+
+.info-name-in-use{
     font-size: 10px;
-    margin-right: 15px;
+    margin-right: 20px;
 }
-#organization-info{
+
+
+.info {
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+#organization-info {
     @extend %orientation-row;
 }
-input{
+
+input {
     width: 30px;
     height: 12px;
+    outline: none;
+    font-size: 10px;
+    background-color: rgba(238, 238, 238, 0.2);
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0px 1px rgb(199, 199, 199);
 }
-.mat-menu-content{
+
+.mat-menu-content {
     background-color: white;
 }
-.mat-menu-item{
+
+.mat-menu-item {
     background-color: white;
     color: black;
 }
-.delete-logo{
+
+.delete-logo {
     color: black;
 }
+
+.arrow-container {
+    height: 18px;
+}
+
+.plus1 {
+    height: 9px;
+}
+
+.minus1 {
+    height: 9px;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+::ng-deep .mat-menu-content{
+    background-color:white;
+  }

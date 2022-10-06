@@ -12,7 +12,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
 import { AddOrganizationComponent } from './components/add-organization/add-organization.component';
-import { SearchOrganizationPipe } from './pipes/search-organization.pipe';
+import { SearchOrganizationPipe } from './pipes/search-organization/search-organization.pipe';
+import { DevideByThreePipe } from './pipes/devide-by-three/devide-by-three.pipe';
+import { NextThreePipe } from './pipes/next-three/next-three.pipe';
 
 
 
@@ -22,7 +24,9 @@ import { SearchOrganizationPipe } from './pipes/search-organization.pipe';
     LayoutComponent,
     CardComponent,
     AddOrganizationComponent,
-    SearchOrganizationPipe
+    SearchOrganizationPipe,
+    DevideByThreePipe,
+    NextThreePipe
   ],
   imports: [
     BrowserModule,

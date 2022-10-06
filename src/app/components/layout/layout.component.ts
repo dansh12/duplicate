@@ -5,6 +5,7 @@ import { OrganizationListService } from 'src/app/services/organization-list.serv
 import { AddOrganizationComponent } from '../add-organization/add-organization.component';
 
 
+
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',

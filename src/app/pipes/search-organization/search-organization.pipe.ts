@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Organization } from '../interfaces/organization';
+import { Organization } from 'src/app/interfaces/organization';
 
 @Pipe({
   name: 'searchOrganization',

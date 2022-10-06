@@ -1,5 +1,5 @@
 <div class="border">
-    <div class="orientation">
+    <div class="orientation-row">
         <div id="headline-info-container">
             <img [src]=organization.logo id="organization-logo">
             <h4 id="organization-name">{{organization.name}}</h4>
@@ -18,24 +18,26 @@
     <div id="organization-info">
         <div>
             <h6>Tracking</h6>
-            <div class="orientation">
-                <p class="info-name">In use:</p>
-                <p class="info">{{organization.tracking}}</p>
+            <div class="orientation-row">
+                <p class="info-name-in-use">In use:</p>
+                <p class="info" [style.color] = "trackingAssigned >= organization.tracking? 'green' :'red'">{{organization.tracking}}</p>
             </div>
-            <div class="orientation">
-                <p class="info-name">Assigned:</p>
-                <input type="number">
+            <div class="orientation-row">
+                <div class="orientation-horizontal-center">
+                    <p class="info-name">Assigned:</p>
+                </div>
+                    <input type="number" [(ngModel)]="trackingAssigned">
             </div>
         </div>
         <div>
             <h6>Protection</h6>
-            <div class="orientation">
-                <p class="info-name">In use:</p>
-                <p class="info">{{organization.protection}}</p>
+            <div class="orientation-row">
+                <p class="info-name-in-use">In use:</p>
+                <p class="info" [style.color] = "protectionAssigned >= organization.protection? 'green' :'red'">{{organization.protection}}</p>
             </div>
-            <div class="orientation">
+            <div class="orientation-row">
                 <p class="info-name">Assigned:</p>
-                <input type="number" class="assigned-input">
+                    <input type="number" [(ngModel)]="protectionAssigned" class="assigned-input">
             </div>
         </div>
     </div>
