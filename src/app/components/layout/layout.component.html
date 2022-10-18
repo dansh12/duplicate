@@ -11,12 +11,10 @@
         </div>
         <button mat-flat-button color="accent" (click)="openDialog()">Add New Organization</button>
     </div>
-    <hr style="margin: 15px 0px;">
-    <div *ngFor="let num of organizations|devideByThree" class="three-cards-group"
-        [ngClass]="organizations.length%3==2&&organizations.length%3==organizations.indexOf(num)%3? 'not-complite':''">
-        <div *ngFor="let organization of organizations|searchOrganization:search:'name'|nextThree:organizations.indexOf(num)"
-            [ngClass]="organizations.length%3==2&&organizations.length%3==organizations.indexOf(num)%3? 'card-container-not-full':'card-container'">
-            <app-card [organization]=organization class="card"></app-card>
+    <hr class="separator">
+    <div class="flex-wrap">
+        <div *ngFor="let organization of organizations|searchOrganization:search:'name'" class="card-border">
+            <app-card [organization]=organization class="card" ></app-card>
         </div>
     </div>
 </div>

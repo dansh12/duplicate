@@ -1,4 +1,4 @@
-<form [formGroup]="organization" (ngSubmit)="onSubmit()">
+<form [formGroup]="organizationForm" (ngSubmit)="onSubmit()">
     <div class="horizontal-centering">
         <h3>Add a new organization</h3>
     </div>
@@ -8,9 +8,8 @@
         </div>
         <div>
             <input class="inputs" type="text" formControlName="name"
-                [ngClass]="organization.get('name')?.valid? 'input-valid':''"
-                [class.input-invalid]="!organization.get('name')?.valid && organization.get('name')?.touched"
-                required="" [(ngModel)]="name">
+                [ngClass]="organizationForm.get('name')?.valid? 'input-valid':''"
+                [class.input-invalid]="!organizationForm.get('name')?.valid && organizationForm.get('name')?.touched">
         </div>
     </div>
     <div class="flex-row">
@@ -19,9 +18,8 @@
         </div>
         <div>
             <input class="inputs" type="text" formControlName="logo"
-                [ngClass]="organization.get('logo')?.valid && isVallidImageUrl()? 'input-valid':''"
-                [class.input-invalid]="organization.get('logo')?.touched &&!isVallidImageUrl()"
-                required="" [(ngModel)]="logo">
+                [ngClass]="organizationForm.get('logo')?.valid? 'input-valid':''"
+                [class.input-invalid]="organizationForm.get('logo')?.touched">
         </div>
     </div>
     <div class="flex-row">
@@ -30,9 +28,8 @@
         </div>
         <div>
             <input class="inputs" type="number" formControlName="tracking"
-                [ngClass]="organization.get('tracking')?.valid? 'input-valid':''"
-                [class.input-invalid]="!organization.get('tracking')?.valid && organization.get('tracking')?.touched"
-                required="" [(ngModel)]="tracking">
+                [ngClass]="organizationForm.get('tracking')?.valid? 'input-valid':''"
+                [class.input-invalid]="!organizationForm.get('tracking')?.valid && organizationForm.get('tracking')?.touched">
         </div>
     </div>
     <div class="flex-row">
@@ -41,12 +38,12 @@
         </div>
         <div>
             <input class="inputs" type="number" formControlName="protection"
-                [ngClass]="organization.get('protection')?.valid? 'input-valid':''"
-                [class.input-invalid]="!organization.get('protection')?.valid && organization.get('protection')?.touched "
-                required="" [(ngModel)]="protection">
+                [ngClass]="organizationForm.get('protection')?.valid? 'input-valid':''"
+                [class.input-invalid]="!organizationForm.get('protection')?.valid && organizationForm.get('protection')?.touched ">
         </div>
     </div>
     <div class="horizontal-centering">
-        <button [disabled]="!organization.valid || !isVallidImageUrl()">Submit</button>
+        <button mat-raised-button [disabled]="!organizationForm.valid">Submit</button>
     </div>
+
 </form>

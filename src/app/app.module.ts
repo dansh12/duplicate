@@ -13,8 +13,15 @@ import { MatDialogModule } from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
 import { AddOrganizationComponent } from './components/add-organization/add-organization.component';
 import { SearchOrganizationPipe } from './pipes/search-organization/search-organization.pipe';
-import { DevideByThreePipe } from './pipes/devide-by-three/devide-by-three.pipe';
-import { NextThreePipe } from './pipes/next-three/next-three.pipe';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatInputModule} from '@angular/material/input';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner/loading-spinner.component';
+import { CheckResponseComponent } from './components/check-response/check-response/check-response.component';
+
+
 
 
 
@@ -25,8 +32,8 @@ import { NextThreePipe } from './pipes/next-three/next-three.pipe';
     CardComponent,
     AddOrganizationComponent,
     SearchOrganizationPipe,
-    DevideByThreePipe,
-    NextThreePipe
+    LoadingSpinnerComponent,
+    CheckResponseComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +44,12 @@ import { NextThreePipe } from './pipes/next-three/next-three.pipe';
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDividerModule,
+    MatInputModule,
+    MatTooltipModule,
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,7 @@
             <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="deleteCard()">
+            <button mat-menu-item (click)="deleteOrganization()">
                 <mat-icon class="delete-logo">not_interested</mat-icon>delete
             </button>
         </mat-menu>
@@ -17,27 +17,29 @@
     <h5>Licenses</h5>
     <div id="organization-info">
         <div>
-            <h6>Tracking</h6>
+            <h6 matTooltip="in use: {{organization.tracking}}">Tracking</h6>
             <div class="orientation-row">
-                <p class="info-name-in-use">In use:</p>
-                <p class="info" [style.color] = "trackingAssigned >= organization.tracking? 'green' :'red'">{{organization.tracking}}</p>
+                <p class="info-name-in-use" >In use:</p>
+                <p class="info" [style.color]="trackingAssigned >= organization.tracking? valid :invalid">
+                    {{organization.tracking}}</p>
             </div>
             <div class="orientation-row">
                 <div class="orientation-horizontal-center">
                     <p class="info-name">Assigned:</p>
                 </div>
-                    <input type="number" [(ngModel)]="trackingAssigned">
+                <input type="number" [(ngModel)]="trackingAssigned">
             </div>
         </div>
         <div>
-            <h6>Protection</h6>
+            <h6 matTooltip="in use: {{organization.protection}}">Protection</h6>
             <div class="orientation-row">
                 <p class="info-name-in-use">In use:</p>
-                <p class="info" [style.color] = "protectionAssigned >= organization.protection? 'green' :'red'">{{organization.protection}}</p>
+                <p class="info" [style.color]="protectionAssigned >= organization.protection? valid :invalid">
+                    {{organization.protection}}</p>
             </div>
             <div class="orientation-row">
                 <p class="info-name">Assigned:</p>
-                    <input type="number" [(ngModel)]="protectionAssigned" class="assigned-input">
+                <input type="number" [(ngModel)]="protectionAssigned" class="assigned-input">
             </div>
         </div>
     </div>
