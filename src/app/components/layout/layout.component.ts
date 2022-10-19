@@ -22,7 +22,7 @@ export class LayoutComponent implements OnInit {
   }
 
   openDialog(): void {
-    this.dialog.open(AddOrganizationComponent);
+    this.dialog.open(AddOrganizationComponent,{width:'400px'});
   }
   
 }

@@ -1,13 +1,12 @@
 <div id="background">
     <div class="headline">
-        <div>
+        <div class="page-info">
             <h4>All organizations({{organizations.length}})</h4>
-            <div id="search-field">
-                <input type="text" placeholder="Search organization " [(ngModel)]="search">
-                <i>
-                    <mat-icon>search</mat-icon>
-                </i>
-            </div>
+            <mat-form-field appearance="fill" id="search-field">
+                <mat-label>Search organization</mat-label>
+                <input type="text" matInput [(ngModel)]="search" >
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
         </div>
         <button mat-flat-button color="accent" (click)="openDialog()">Add New Organization</button>
     </div>

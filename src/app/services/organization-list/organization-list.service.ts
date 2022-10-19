@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Organization } from '../../interfaces/organization';
-import { UtilitiesServiceService } from '../utilities-service/utilities-service.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -51,10 +51,10 @@ export class OrganizationListService {
     protection: 1265
   }];
 
-  constructor(private UtilitiesService: UtilitiesServiceService) {}
+  constructor() {}
 
   addAnOrganization(organization: Organization){
-    organization.id= this.UtilitiesService.generateId();
+    console.log(organization.id);
     this.organizations.push(organization);
   }
   getOrganizations(){

@@ -20,6 +20,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner/loading-spinner.component';
 import { CheckResponseComponent } from './components/check-response/check-response/check-response.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
@@ -49,7 +50,8 @@ import { CheckResponseComponent } from './components/check-response/check-respon
     MatInputModule,
     MatTooltipModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
