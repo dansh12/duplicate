@@ -18,9 +18,11 @@ import {MatInputModule} from '@angular/material/input';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatCardModule} from '@angular/material/card';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner/loading-spinner.component';
-import { CheckResponseComponent } from './components/check-response/check-response/check-response.component';
+
+
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 
 
@@ -34,7 +36,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AddOrganizationComponent,
     SearchOrganizationPipe,
     LoadingSpinnerComponent,
-    CheckResponseComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,

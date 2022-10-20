@@ -20,7 +20,7 @@
             <h6 matTooltip="in use: {{organization.tracking}}">Tracking</h6>
             <div class="orientation-row">
                 <p class="info-name-in-use" >In use:</p>
-                <p class="info" [style.color]="trackingAssigned >= organization.tracking? valid :invalid">
+                <p class="info" [ngClass]="trackingAssigned >= organization.tracking? 'valid' :'invalid'">
                     {{organization.tracking}}</p>
             </div>
             <div class="orientation-row">
@@ -34,7 +34,7 @@
             <h6 matTooltip="in use: {{organization.protection}}">Protection</h6>
             <div class="orientation-row">
                 <p class="info-name-in-use">In use:</p>
-                <p class="info" [style.color]="protectionAssigned >= organization.protection? valid :invalid">
+                <p class="info" [ngClass] ="protectionAssigned >= organization.protection? 'valid' :'invalid'">
                     {{organization.protection}}</p>
             </div>
             <div class="orientation-row">

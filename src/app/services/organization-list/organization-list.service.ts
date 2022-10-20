@@ -54,7 +54,6 @@ export class OrganizationListService {
   constructor() {}
 
   addAnOrganization(organization: Organization){
-    console.log(organization.id);
     this.organizations.push(organization);
   }
   getOrganizations(){

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { OrganizationListService } from 'src/app/services/organization-list/organization-list.service';
 import { AddOrganizationComponent } from '../add-organization/add-organization.component';
-import {MatDividerModule} from '@angular/material/divider';
+
 
 
 

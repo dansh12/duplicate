@@ -4,7 +4,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { MatDialog } from '@angular/material/dialog';
 import { OrganizationListService } from 'src/app/services/organization-list/organization-list.service';
 import { UtilitiesServiceService } from 'src/app/services/utilities-service/utilities-service.service';
-import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner/loading-spinner.component';
+import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
+
 
 @Component({
   selector: 'app-add-organization',

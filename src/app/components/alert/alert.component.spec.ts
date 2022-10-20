@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CheckResponseComponent } from './check-response.component';
+import { AlertComponent } from './alert.component';
 
-describe('CheckResponseComponent', () => {
-  let component: CheckResponseComponent;
-  let fixture: ComponentFixture<CheckResponseComponent>;
+describe('AlertComponent', () => {
+  let component: AlertComponent;
+  let fixture: ComponentFixture<AlertComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CheckResponseComponent ]
+      declarations: [ AlertComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CheckResponseComponent);
+    fixture = TestBed.createComponent(AlertComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

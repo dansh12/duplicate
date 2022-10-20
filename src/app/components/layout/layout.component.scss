@@ -19,21 +19,16 @@
         border: none;
     }
     button{
-        background-color: rgb(73,153,252);
-        color: white;
+        // background-color: rgb(73,153,252);
+        // color: white;
     }
 }
 h4{
     margin: 0;
 }
 #search-field{
-    border: 1px solid rgb(165, 163, 163);
-    border-radius: 5px;
     margin-left: 20px;
-    height: 45px;
-    input{
-        outline: none;
-    }
+    height: 40px;
 }
 
 .card-border{
@@ -56,11 +51,7 @@ h4{
 .separator{
     margin: 15px 0px;
 }
-mat-form-field{
-    mat-label{
-        color: black;
-    }
-}
+
 .page-info{
     font-size: 12px;
 }

@@ -102,14 +102,9 @@ input {
 .minus1 {
     height: 9px;
 }
-
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.valid{
+    color: green;
 }
-
-::ng-deep .mat-menu-content{
-    background-color:white;
-  }
+.invalid{
+    color: red;
+}

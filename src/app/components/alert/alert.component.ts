@@ -3,13 +3,13 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 @Component({
-  selector: 'app-check-response',
-  templateUrl: './check-response.component.html',
-  styleUrls: ['./check-response.component.scss']
+  selector: 'app-alert',
+  templateUrl: './alert.component.html',
+  styleUrls: ['./alert.component.scss']
 })
-export class CheckResponseComponent implements OnInit {
+export class AlertComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<CheckResponseComponent>,
+  constructor(public dialogRef: MatDialogRef<AlertComponent>,
     @Inject (MAT_DIALOG_DATA) public data: any) {}
 
   onDismiss(){

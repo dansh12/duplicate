@@ -17,7 +17,7 @@
             <mat-label>organization logo</mat-label>
             <input type="text" matInput formControlName="logo">
             <mat-error *ngIf="!organizationForm.get('logo')?.valid">
-                valid logo is required
+                valid logo is <strong>required</strong>
             </mat-error>
         </mat-form-field>
     </div>
@@ -41,6 +41,6 @@
     </div>
 
     <div class="horizontal-centering">
-        <button mat-raised-button [disabled]="!organizationForm.valid">Submit</button>
+        <button mat-raised-button color="primary" [disabled]="!organizationForm.valid">Submit</button>
     </div>
 </form>
